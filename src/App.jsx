@@ -49,7 +49,14 @@ const App = () => {
               <div>
                 <Grid container spacing={2} justifyContent="center">
                   <Grid item>
-                    <Button variant="contained">See my photos</Button>
+                    <Button variant="contained" color="primary">
+                      See my photos
+                    </Button>
+                  </Grid>
+                  <Grid item>
+                    <Button variant="contained" color="secondary">
+                      See my photos
+                    </Button>
                   </Grid>
                 </Grid>
               </div>
