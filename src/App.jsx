@@ -15,20 +15,23 @@ import {
 
 import { PhotoCamera } from "@material-ui/icons";
 
+import useStyles from "./styles";
+
 const App = () => {
+  const classes = useStyles();
   return (
     <div>
       <>
         <CssBaseline />
         <AppBar position="relative">
           <Toolbar>
-            <PhotoCamera />
+            <PhotoCamera className={classes.icon} />
             <Typography variant="h6">Photo Album</Typography>
           </Toolbar>
         </AppBar>
         <main>
-          <div>
-            <Container maxWidth="sm">
+          <div className={classes.container}>
+            <Container maxWidth="sm" style={{ mt: "100px" }}>
               <Typography
                 variant="h2"
                 align="center"
@@ -46,7 +49,7 @@ const App = () => {
                 Hello everyone I am practicing Material UI and I have coded from
                 scratch this photo album.
               </Typography>
-              <div>
+              <div className={classes.buttons}>
                 <Grid container spacing={2} justifyContent="center">
                   <Grid item>
                     <Button variant="contained" color="primary">
@@ -55,7 +58,7 @@ const App = () => {
                   </Grid>
                   <Grid item>
                     <Button variant="contained" color="secondary">
-                      See my photos
+                      Second Action
                     </Button>
                   </Grid>
                 </Grid>
